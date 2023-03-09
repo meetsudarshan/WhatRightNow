@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hello Bulma!</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="text/css" href="./assets/css/style.css">
   </head>
   <body>
   <section class="section">
@@ -39,45 +38,12 @@
       <div class="column is-one-third">is-one-third</div>
       <div class="column">
         <div class="card is-4by3">
-          <div class="card-tr is-size-4">
-            <figure class="tr is-4by3">
-              <div class="card">
-
-                <h2>Brussels</h2>
-                <h3>Cloudy<span>Wind 10km/h <span class="dot">•</span> Precip 0%</span></h3>
-                <h1>23°</h1>
-                <div class="sky">
-                    <div class="sun"></div>
-                    <div class="cloud">
-                        <div class="circle-small"></div>
-                        <div class="circle-tall"></div>
-                        <div class="circle-medium"></div>
-                    </div>
-                </div>
-                <table>
-                    <tr>
-                        <td>TUE</td>
-                        <td>WED</td>
-                        <td>THU</td>
-                        <td>FRI</td>
-                        <td>SAT</td>
-                    </tr>
-                    <tr>
-                        <td>30°</td>
-                        <td>34°</td>
-                        <td>36°</td>
-                        <td>34°</td>
-                        <td>37°</td>
-                    </tr>
-                    <tr>
-                        <td>17°</td>
-                        <td>22°</td>
-                        <td>19°</td>
-                        <td>23°</td>
-                        <td>19°</td>
-                    </tr>
-                </table>
-            </div>
+          <div class="card-script is-size-4">
+            <figure class="script is-4by3">
+              <a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/?unit=us" data-label_1="NEW YORK" data-label_2="WEATHER" data-font="Arial Black" data-icons="Climacons Animated" data-days="5" data-theme="original" >NEW YORK WEATHER</a>
+              <script>
+              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+              </script>
             </figure>
           </div>
         </div>
