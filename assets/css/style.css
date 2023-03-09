@@ -8,7 +8,7 @@
   }
 
 
-.inputCityName {
+.inputValue {
     font-size: medium;
     color: black;
     font-family: 'Calibri', sans-serif;
@@ -42,9 +42,42 @@ button.button:hover{
     border: 1px solid rgb(122, 112, 112) 
 }
 
+button.restaurant {
+    width: 15%;
+    margin-left: 85%;
+    padding: 10px 20px;
+    border: none;
+    outline:auto;
+    background-color:darkgray;
+    color:black;
+    border-radius: 10px;
+    
+}
+
+button.restaurant:focus{
+    outline:none;
+}
+
+button.restaurant:hover{
+    border: 1px solid rgb(122, 112, 112) 
+}
+
+button {
+    display:inline;
+}
+
 .displayWeather{
     display: flex;
     margin-left: 55%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Calibri', sans-serif;
+}
+
+.displayRestaurant{
+    display: flex;
+    margin-left: 85%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
