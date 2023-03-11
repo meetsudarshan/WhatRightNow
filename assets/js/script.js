@@ -17,7 +17,8 @@ var Food3 = document.querySelector('.Food3');
 var Food4 = document.querySelector('.Food4');
 var Food5 = document.querySelector('.Food5');
 var Food6 = document.querySelector('.Food6');
-var Food7 = document.querySelector('.Food7');
+// var Food7 = document.querySelector('.Food7');
+var Food9 = document.querySelector('.Food9');
 
 
 button.addEventListener('click', function(){
@@ -56,8 +57,8 @@ fetch(`https://infinite-shelf-46659.herokuapp.com/https://api.yelp.com/v3/busine
     },
   })
   .then(response => response.json())
-//   .then(function (data) {
-//     console.log(data)
+  // .then(function (data) {
+  //   console.log(data)
     .then(
         displayRestaurant)
     .catch(err => alert('Wrong City name')); 
@@ -75,6 +76,7 @@ const displayRestaurant=(businesses)=>{
     Food4.innerText=`Price:${businesses.businesses[j].price}`
     Food5.innerText=`Address:${businesses.businesses[j].location.address1}`
     Food6.innerText=`City:${businesses.businesses[j].location.city}`
-    Food7.innerText=`distane:${businesses.businesses[j].display_phone}miles`
+    // Food7.innerText=`distance:${businesses.businesses[j].distance}miles`
+    Food9.innerText=`Type:${businesses.businesses[j].categories[2].title}`
 }
 }
