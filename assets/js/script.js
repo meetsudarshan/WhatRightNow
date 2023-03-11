@@ -34,12 +34,12 @@ button.addEventListener('click', function(){
 
 const displayData=(weather)=>{
     for (var i = 0; i <5; i++) {
-    temp.innerText=`Temperature:${weather.list[i].main.temp}°F`
+    temp.innerText=`Temp:${weather.list[i].main.temp}°F`
     temp1.innerText=`Humidity:${weather.list[i].main.humidity}`
     temp2.innerText=`Feels like:${weather.list[i].main.feels_like}°F`
     temp3.innerText=`Temp_Max:${weather.list[i].main.temp_max}°F`
     temp4.innerText=`Temp_Min:${weather.list[i].main.temp_min}°F`
-    temp5.innerText=`Rainfall:${weather.list[i].weather[i].description}`
+    temp5.innerText=`Rain:${weather.list[i].weather[i].description}`
     temp6.innerText=`Wind: ${weather.list[i].wind.speed}mph`
     temp7.innerText=`${weather.city.name}`
   }
