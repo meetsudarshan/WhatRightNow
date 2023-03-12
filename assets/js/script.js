@@ -10,18 +10,19 @@ var temp5 = document.querySelector('.temp5');
 var temp6 = document.querySelector('.temp6');
 var temp7 = document.querySelector('.temp7');
 var Food = document.querySelector('.Food');
-var Food8 = document.getElementById('rImage').src;
 var Food1 = document.querySelector('.Food1');
 var Food2 = document.querySelector('.Food2');
 var Food3 = document.querySelector('.Food3');
 var Food4 = document.querySelector('.Food4');
 var Food5 = document.querySelector('.Food5');
 var Food6 = document.querySelector('.Food6');
-// var Food7 = document.querySelector('.Food7');
-var Food9 = document.querySelector('.Food9');
+var Food7 = document.querySelector('.Food7');
+var Food8 = document.querySelector('.Food8');
+var restaurantsData = document.querySelector('.restColumn')
+// var image = document.getElementById('image').src;
 
 
-button.addEventListener('click', function(){
+button.addEventListener('click', function weatherAPI(){
     fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${inputvalue.value}&units=imperial&appid=108dd9a67c96f23039937fe6f3c91963`)
     .then(response => response.json())
 //   .then(function (data) {
@@ -46,7 +47,7 @@ const displayData=(weather)=>{
   }
 }
 
-food.addEventListener('click', function(){
+button.addEventListener('click', function restaurantApi(){
 fetch(`https://infinite-shelf-46659.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=${inputvalue.value}&term=restaurants&radius=20000&open_now=true&sort_by=best_match&limit=20`, {
     method: "GET",
     headers: {
@@ -68,15 +69,16 @@ fetch(`https://infinite-shelf-46659.herokuapp.com/https://api.yelp.com/v3/busine
 const displayRestaurant=(businesses)=>{
     for (var j = 0; j <5; j++) {
     // Food.innerText=`${businesses.businesses[j].image_url}`
-    Food8.innerText=`${businesses.businesses[j].image_url}`
-    // h.setAttribute(businesses.businesses[j].image_url)   
-    Food1.innerText=`Name:${businesses.businesses[j].name}`
+     Food1.innerText=`Name:${businesses.businesses[j].name}`
     Food2.innerText=`Phone:${businesses.businesses[j].display_phone}`
     Food3.innerText=`Review:${businesses.businesses[j].rating}`
     Food4.innerText=`Price:${businesses.businesses[j].price}`
     Food5.innerText=`Address:${businesses.businesses[j].location.address1}`
     Food6.innerText=`City:${businesses.businesses[j].location.city}`
     // Food7.innerText=`distance:${businesses.businesses[j].distance}miles`
-    Food9.innerText=`Type:${businesses.businesses[j].categories[2].title}`
+    Food8.innerText=`Type:${businesses.businesses[j].categories[2].title}`
+    
+   
 }
 }
+

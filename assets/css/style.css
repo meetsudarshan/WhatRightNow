@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+  }
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 html,
 body {
@@ -93,7 +97,7 @@ button {
     display: flexbox;
 }
 
-.card {
+.weatherCard {
     margin: 0 auto;
     margin-top: 5%;
     padding: 5px 30px;
@@ -149,73 +153,35 @@ span span {
     margin-left: 0;
 }
 
-/* .dot {
-    font-size: .9em;
-}
+ 
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aqua;
+  }
+  
+  .restColumn {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+    border: 3px solid navy;
+    display: fixed;
+  }
+  
 
-.sky {
-    position: right;
-    margin-top: 108px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: #03A9F4;
-    /* -webkit-animation: up 2s cubic-bezier(.39, 0, .38, 1) .2s; */
-/* } */
-
-/* .sun {
-    position: right;
-    top: -3px;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    background-color: #FFEB3B;
-    /* -webkit-animation: up 2s cubic-bezier(.39, 0, .38, 1) .5s;
-}  */
-
-/* .cloud {
-    /* border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);position: right; */
-    /* top: 60px;
-    left: 200px; */
-    /* object-position: right top;
-    object-fit: none;
-} */ 
-
-/* .cloud:before,
-.cloud:after {
-    position: right;
-    display: block;
-    content: "";
-}
-
-.cloud:before {
-    margin-left: -10px;
-    width: 51px;
-    height: 18px;
-    background: #fff;
-}
-
-.cloud:after {
-    position: absolute;
-    top: -10px;
-    left: -22px;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 50px -6px 0 6px #fff, 25px -19px 0 10px #fff; */
-/* } */
-
-.sky {
-    position: right;
-    display: block;
-}
-
-table {
-    position: relative;
-    top: 10px;
-    width: 100%;
+  .restRow {margin: 0 -5px;}
+  
+  .restCard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
     text-align: center;
-}
-
+    background-color: #f1f1f1;
+   }
+  
+  /* Responsive columns - one column layout (vertical) on small screens */
+  @media screen and (max-width: 600px) {
+    .restColumn {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
