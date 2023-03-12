@@ -47,6 +47,19 @@ const displayData=(weather)=>{
   }
 }
 
+var weatherMetric = {
+  temp: temp.value,
+  temp1: temp1.value,
+  temp2: temp2.value,
+  temp3: temp3.value,
+  temp4: temp4.value,
+  temp5: temp5.value,
+  temp6: temp6.value,
+  temp7: temp7.value
+};
+localStorage.setItem("weatherMetric", JSON.stringify(weatherMetric));
+// renderMessage();
+
 button.addEventListener('click', function restaurantApi(){
 fetch(`https://infinite-shelf-46659.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=${inputvalue.value}&term=restaurants&radius=20000&open_now=true&sort_by=best_match&limit=20`, {
     method: "GET",
@@ -67,7 +80,7 @@ fetch(`https://infinite-shelf-46659.herokuapp.com/https://api.yelp.com/v3/busine
 // })
 
 const displayRestaurant=(businesses)=>{
-    for (var j = 0; j <5; j++) {
+    for (var j = 0; j <8; j++) {
     // Food.innerText=`${businesses.businesses[j].image_url}`
      Food1.innerText=`Name:${businesses.businesses[j].name}`
     Food2.innerText=`Phone:${businesses.businesses[j].display_phone}`
