@@ -19,6 +19,19 @@ var Food6 = document.querySelector('.Food6');
 var Food7 = document.querySelector('.Food7');
 var Food8 = document.querySelector('.Food8');
 var restaurantsData = document.querySelector('.restColumn')
+var inputField = document.querySelector(".inputValue");
+var previousLocation = localStorage.getItem("location");
+
+
+if (previousLocation) {
+  inputField.value = previousLocation;
+}
+var searchButton = document.querySelector(".button");
+searchButton.addEventListener("click", function () {
+  var inputValue = inputField.value
+  localStorage.setItem("location", inputValue);
+});
+
 // var image = document.getElementById('image').src;
 
 
