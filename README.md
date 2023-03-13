@@ -1,76 +1,71 @@
-# Module 06 Mini-Project: Library of Congress Search Tool
+# WhatRightNow
 
-In this activity, you will work with a group to build an application that searches and displays results from the Library of Congress API.
 
-## Instructions
+## Description
 
-The completed application should meet the following criteria:
+WhatRight will provide you weather information and best resturant locations in 25 Miles radius.We implemenmted copncepts learned in First 6 weeks of bootcamp in our project by creating UI using CSS framework, usee local storage to retrives recent serached results, third party API calls to get waether and resturant data 
 
-* As a user, I can submit a search query from the application to request data and receive a response from the Library of Congress.
+[Click here to check our deployed project](https://meetsudarshan.github.io/WhatRightNow/)
 
-* As a user, I can either perform a generic search for data in all formats or I can select a format in the form to help filter results.
+## Table of Contents 
 
-* As a user, I can see all of the results of my search displayed on a separate page.
 
-* As a user, I can conduct additional searches from the results page as well.
 
-To learn about how to use this API, check out the Requests section of the [Library of Congress API documentation](https://libraryofcongress.github.io/data-exploration/).
+- [Technologies](#Technologies)
+- [APIs](#APIs)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
 
-### The Homepage
+## Technologies
 
-The homepage (`index.html`) should have the following:
+Following technologies used in this project 
 
-* A simple, well thought-out UI.
+* HTML
+* CSS 
+* Bulma CSS Framework
+* JavaScript
+* Jquery
+* Json
 
-* A form with a text input field to capture a search query and an option select dropdown to capture the format of the search query. The options in the dropdown should be a list of the possible format values listed in the [Library of Congress API documentation on requests](https://libraryofcongress.github.io/data-exploration/requests.html#format).
+## APIs
+Following APIs used in this project
 
-* A browser event listener attached to the form to execute a function on submission, which will capture both form values and redirect the user to a search results page with those values included in the URL as query parameters. This will use the browser's `location.replace()` method.
+* OpenWeatherMap
+* Yelp Fusion API
 
-* If there is no format selected from the dropdown, the URL should look something like the following example:
+## Usage
 
-  ```http
-  /search-results.html?q=dogs&format=
-  ```
+To use  this applicaiton please type in location name hit sreach 
 
-* If there is a format selected from the dropdown, the URL should look something like the following example:
 
-  ```http
-  /search-results.html?q=dogs&format=photos
-  ```
+## Credits
 
-### The Search Results Page
+List of collaborators: 
 
-The search results page (`search-results.html`) should have and do the following:
+-[Sudarshan Samaddar](https://github.com/meetsudarshan)
 
-* On page load, if there are query parameters, immediately parse them and use them in a request URL to fetch data from the Library of Congress API.
 
-* If there is a value for the format query parameter, use the format endpoint to search for something based on the chosen format. For more information, see the [Library of Congress API documentation on the format endpoint](https://libraryofcongress.github.io/data-exploration/requests.html#format).
+-[Meni Hooks](https://github.com/M-Hooks) 
 
-* If there is no value for the format query parameter, use the search endpoint to search for all types of data. For more information, see the [Library of Congress API documentation on the search endpoint](https://libraryofcongress.github.io/data-exploration/requests.html#search).
 
-* The response from the API request will then be displayed on the page. It is up to you and your team to determine which data should be displayed from the overall `response` object, but you must use data from the `results` property in the `response` object. For more information, see the [Library of Congress API documentation on responses](https://libraryofcongress.github.io/data-exploration/responses.html).
+-[Muhammad Jamal](https://github.com/jamalm06) 
 
-* The same form from the homepage should be here as well. Instead of redirecting a user to another page, however, it will perform a search right on the page and display the new results.
 
-## Assets
+-[Gabriel N]() 
 
-The following image demonstrates the homepage's appearance and functionality:
 
-![The home page shows a search bar with the ability to select a format from a dropdown menu.](./Images/01-homepage.png)
+-[Nittaya Wu]() 
 
-The following image demonstrates the search results page's appearance and functionality:
+## License
 
-![The search results page displays results from a search conducted in the form on the left side of the page.](./Images/02-search-results-page.png)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
----
 
-## 💡 Hints
 
-Will every result have the same data? If not, how will we handle printing it to the page? Can the form design and functionality from the homepage be reused for the search results page?
 
-## 🏆 Bonus
 
-* How can we build this application using our knowledge in Git collaboration?
 
----
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+
+
+
