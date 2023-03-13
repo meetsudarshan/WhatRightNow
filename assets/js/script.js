@@ -108,3 +108,10 @@ const displayRestaurant=(businesses)=>{
 }
 }
 
+//added function to get enter keypress for user input with click 
+inputField.addEventListener("keypress", function (event) {
+  if (event.key === "Enter"){
+  event.preventDefault();
+  button.click();
+}
+})
