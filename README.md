@@ -3,9 +3,20 @@
 
 ## Description
 
-WhatRight will provide you weather information and best resturant locations in 25 Miles radius.We implemenmted copncepts learned in First 6 weeks of bootcamp in our project by creating UI using CSS framework, usee local storage to retrives recent serached results, third party API calls to get waether and resturant data 
+WhatRightNow website will provide you weather information and best resturant locations in 25 Miles radius.We implemented copncepts learned in First 6 weeks of bootcamp in our project by creating UI using CSS framework, use local storage to retrive recent searched results, third party API calls to get weather and restaurant data.
 
 [Click here to check our deployed project](https://meetsudarshan.github.io/WhatRightNow/)
+
+User Story:
+As a customer, I would like to see a webpage where I can search the current weather and get recommendations of some of the restaurants nearby. 
+
+Acceptance Criteria: 
+It is done when I can see the option to search a location. 
+It is done when I am able to see the current weather when I search with the location. 
+It is done when I can see the temperature, wind speed, current humidity, current weather condition and what the temperature actually feels like. 
+It is done when I can see a minimum of 10 recommendations of restaurants near me. 
+It is done when the recommendations of the restaurants include image of the restaurants, name, address, Restaurant type, phone number and address. 
+It is done when upon entering an incorrect location I am alerted to input a current name. 
 
 ## Table of Contents 
 
@@ -36,7 +47,7 @@ Following APIs used in this project
 
 ## Usage
 
-To use  this applicaiton please type in location name hit sreach 
+To use  this applicaiton please type in location name and hit serach 
 
 
 ## Credits
@@ -45,15 +56,11 @@ List of collaborators:
 
 -[Sudarshan Samaddar](https://github.com/meetsudarshan)
 
-
 -[Meni Hooks](https://github.com/M-Hooks) 
-
 
 -[Muhammad Jamal](https://github.com/jamalm06) 
 
-
 -[Gabriel N]() 
-
 
 -[Nittaya Wu]() 
 
