@@ -11,12 +11,12 @@ WhatRightNow website will provide you weather information and best resturant loc
 As a customer, I would like to see a webpage where I can search the current weather and get recommendations of some of the restaurants nearby. 
 
 ## Acceptance Criteria: 
-It is done when I can see the option to search a location. 
-It is done when I am able to see the current weather when I search with the location. 
-It is done when I can see the temperature, wind speed, current humidity, current weather condition and what the temperature actually feels like. 
-It is done when I can see a minimum of 10 recommendations of restaurants near me. 
-It is done when the recommendations of the restaurants include image of the restaurants, name, address, Restaurant type, phone number and address. 
-It is done when upon entering an incorrect location I am alerted to input a current name. 
+1. It is done when I can see the option to search a location. 
+2. It is done when I am able to see the current weather when I search with the location. 
+3. It is done when I can see the temperature, wind speed, current humidity, current weather condition and what the temperature actually feels like. 
+4. It is done when I can see a minimum of 10 recommendations of restaurants near me. 
+5. It is done when the recommendations of the restaurants include image of the restaurants, name, address, Restaurant type, phone number and address. 
+6. It is done when upon entering an incorrect location I am alerted to input a current name. 
 
 ## Table of Contents 
 
