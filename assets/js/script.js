@@ -25,6 +25,9 @@ var userInput = document.getElementById("userSreach");
 var fetchResButton = document.getElementById("res");
 var restaurantsData = document.getElementById("resData");
 var locCard = document.getElementById("locationCard");
+const modalBg = document.querySelector('.modal-background');
+const modal = document.querySelector('.modal');
+
 if (previousLocation) {
   inputField.value = previousLocation;
 }
@@ -273,8 +276,12 @@ function weatherApi() {
         })
         
     })
-    .catch(err => alert('Wrong City name')); 
-}
+    .catch(err => modal.classList.add('is-active')); 
+    modalBg.addEventListener('click', ()=> {
+      modal.classList.remove('is-active');
+    });
+  }
+
 
 function YelpApiCallData(callData) {
   var resturantCard = document.createElement("div");
