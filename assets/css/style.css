@@ -126,12 +126,12 @@ h2, p {
 }
 
 h3, {
-    float: left;
+    /* float: left;
     margin-right: 33px;
     color: #777;
     font-weight: 400;
     font-size: 1em;
-    -webkit-animation: up 2s cubic-bezier(.39, 0, .38, 1) .1s;
+    -webkit-animation: up 2s cubic-bezier(.39, 0, .38, 1) .1s; */
 }
 
 span {
@@ -215,4 +215,9 @@ h6 {
     content: "";
     display: table;
     clear: both;
+  }
+
+  .modal-background{
+    background-color: whitesmoke;
+    border-radius: 10px;
   }
