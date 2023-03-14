@@ -197,22 +197,22 @@ function weatherApi() {
 
 
           //main div for waeter image and feel like 
-          var ImageWeather = document.createElement("div"); 
+          var ImageWeather = document.createElement("div");
           ImageWeather.classList.add("column", "is-full");
 
           //columns for image weather and feel like
 
-          var IWeather = document.createElement("div"); 
+          var IWeather = document.createElement("div");
           IWeather.classList.add("columns");
 
 
           var isImageDiv = document.createElement("div")
           isImageDiv.classList.add("column", "is-6");
           //image tage for weather image
-          var isImage = document.createElement("img"); 
-         var iconCode = citydata.current.weather[0].icon;
+          var isImage = document.createElement("img");
+          var iconCode = citydata.current.weather[0].icon;
           isImage.textContent = iconCode;
-          isImage.setAttribute("src", "https://openweathermap.org/img/wn/"+ iconCode +"@2x.png" )
+          isImage.setAttribute("src", "https://openweathermap.org/img/wn/" + iconCode + "@2x.png")
           isImage.setAttribute("alt", "weater image");
           // temp card div
 
@@ -227,7 +227,7 @@ function weatherApi() {
           //h1 for temp
           var tempH1 = document.createElement("h1");
           tempH1.classList.add("column", "is-12");
-          tempH1.textContent = citydata.current.temp +"°F";
+          tempH1.textContent = citydata.current.temp + "°F";
 
 
           //h2 for feel like
@@ -235,23 +235,23 @@ function weatherApi() {
           tempH2.classList.add("column", "is-12");
           tempH2.textContent = "Feels Like: " + citydata.current.feels_like + "°F";
 
-          
+
           isImageDiv.append(isImage);
           IWeather.append(isImageDiv);
           isTempColumn.append(tempH1, tempH2);
           isTemp.append(isTempColumn);
-          IWeather.append(isTemp)          
+          IWeather.append(isTemp)
           ImageWeather.append(IWeather);
           locCard.append(ImageWeather);
 
           console.log(citydata.daily);
 
-//main div for forecast Weather
-var fWeather = document.createElement("div");
-fWeather.classList.add("column", "is-full");
-fWeather.textContent = "";
+          //main div for forecast Weather
+          var fWeather = document.createElement("div");
+          fWeather.classList.add("column", "is-full");
+          fWeather.textContent = "";
 
-          var dData = 
+          var dData = "";
           //temp8.innerText=`${citydata.current.dt}`
 
           // temp.innerText = `Temp:${citydata.current.temp}°F`
