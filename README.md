@@ -7,10 +7,10 @@ WhatRightNow website will provide you weather information and best resturant loc
 
 [Click here to check our deployed project](https://meetsudarshan.github.io/WhatRightNow/)
 
-User Story:
+## User Story:
 As a customer, I would like to see a webpage where I can search the current weather and get recommendations of some of the restaurants nearby. 
 
-Acceptance Criteria: 
+## Acceptance Criteria: 
 It is done when I can see the option to search a location. 
 It is done when I am able to see the current weather when I search with the location. 
 It is done when I can see the temperature, wind speed, current humidity, current weather condition and what the temperature actually feels like. 
