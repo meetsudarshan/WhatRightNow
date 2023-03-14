@@ -82,9 +82,10 @@ button.button:hover{
 }
 
 .card {
-  background-color: pink;
+  color: navy;
+  background-color: aqua;
   padding-top: 20px;
-  width: 200%
+  /* width: 200% */
 }
 .weatherCard {
     /* margin: 0 auto; */
@@ -94,7 +95,7 @@ button.button:hover{
     height: 300px;
     margin-left: 2%;
     border-radius: 10px; */
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
     /* box-shadow: 1px 2px 10px rgba(0, 0, 0, .2);
     -webkit-animation: open 2s cubic-bezier(.39, 0, .38, 1); */
 }
@@ -117,12 +118,14 @@ h1 {
     padding: 10px;
     -webkit-animation: up 2s cubic-bezier(.39, 0, .38, 1) .2s;
 }
-
-h2, p {
+h2 {
+  color: navy;
+}
+ p {
     font-weight: 100;
-    font-size: 1.25em;
+    font-size: 1 em;
     -webkit-animation: up 2s cubic-bezier(.39, 0, .38, 1);
-    color: teal;
+    color: black;
 }
 
 h3, {
