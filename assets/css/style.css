@@ -225,3 +225,16 @@ h6 {
   #res{
     padding-left: 10px;
   }
+
+
+.nameSize {
+  font-size: 18Px;
+}
+
+.addressSize {
+  font-size: 15px;
+  padding: 4px;;
+}
+.subHeading {
+  font-size: 16px;
+}
