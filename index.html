@@ -1,299 +1,121 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  </head>
-  <body>
-   
-    <header class = "siteName">
-        <h1> <strong>What<span style="color:red">Right</span>&nbsp &nbsp Now</strong></h1>
-        <img src="https://media.giphy.com/media/BRie5xjBZcHhj06NfL/giphy.gif" width="80" height="80">
-        <!-- <h2> <span style="color:blueviolet; font-size: 12px">Make the most of your location</span> </h2> -->
-    </header>
 
-    <h6 class="title">
-      <font size="+2">Welcome to WhatRightNow, the only website dedicated to serve YOU. I am your local weatherman and also your restaurant guide. Start searching your current city or town and see the magic. </font>
-      </h6>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello Bulma!</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
 
+<body>
 
-    <div class="weatherSearch">
-      <section id="locSearch" class="weather">
-       <section class = "inputcity">
-           <input type="text" class="inputValue" placeholder="Enter City">
-           <button class="button">Search</button> 
-               </section>
-       </section>
-       <section class="displayWeather">
-       </section>
-       <section class="displayRestaurant">
-     </section> 
-   </div> 
-   </div>
-<div class="row">
-    <div class="weatherCard">
-      <img class= "sky" src="./assets/images/weather.png" alt = "weather" class = "w3-image" class ="cloud" width="100" height="100">
-      <h2 class="temp7">---</h2>
-      <h2 class="temp">---</h2>
-      <h2 class= "temp6">---</h2>
-      <h2 class ="temp5">---</h2>
-      <h2 class="temp3">---</h2>
-      <h2 class="temp4">---</h2>
-      <h2 class ="temp2">---</h2>
-      <h2 class ="temp1">---</h2>
-    </div> 
+  <header class="siteName">
+    <h1> <strong>What<span style="color:red">Right</span>&nbsp &nbsp Now</strong></h1>
+    <img src="https://media.giphy.com/media/BRie5xjBZcHhj06NfL/giphy.gif" width="80" height="80">
+    <!-- <h2> <span style="color:blueviolet; font-size: 12px">Make the most of your location</span> </h2> -->
+  </header>
+  <div class=" container">
+    <div class="columns ">
+      <div class="column  is-4 section">
+        <h1 class="title">
+          Welcome to WhatRightNow, the only website dedicated to serve YOU. I am your local weatherman and also your
+          restaurant guide. Start searching your current city or town and see the magic.
+        </h1>
+        <p class="subtitle">
+          </p>
+      </div>
+      <div class="column is-4 weatherSearch">
+        <section id="locSearch" class="weather">
+          <section class="inputcity">
+            <input type="text" class="inputValue" id="userSreach" placeholder="Enter City, State">
+            <p>Please serach City name with State</p>
+            <button class="button" id="res">Search Area</button>
+          </section>
+        </section>
+      </div>
+      <div class="column is-4 ">
+        <div class="card">
+          <div class="columns is-multiline" id="locationCard">
+            <!-- <div class="column is-full"> //
+              <div class="columns"> //
+                <h2 class="column is-6 temp7">Location</h2> //
+                <h3 class="column is-6 temp8">date</h3> //
+              </div>
+            </div> -->
+            <!-- <div class="column is-full">//
+              <div class="columns">//
+                <div class="column is-4 ">Coudy</div>
+                <div class="column is-4 temp6">Wind</div>
+                <div class="column is-4 temp5">Precp</div>
+              </div>
+            </div> -->
+            <!-- <div class="column is-full"> ImageWeather
+              <div class="columns"> Iwaehter
+                <div class="column is-6"> is image div
+                  <img class="temp9" src="" alt="weather-image"> isImage
+                </div>
+                <div class="column is-6"> is temp
+                  <div class="columns is-multiline"> is temp clo
+                    <h2 class="column is-12 temp">Temp</h2>
+                    <h3 class="column is-12 temp2">Feel like</h3>
+                  </div>
+                </div>
+              </div>
 
+            </div> -->
+            <!-- <div class="column is-full">
+              <div class="columns">
+                <div class="column is-3">
+                  <div class="columns is-multiline">
+                    <h3 class="column is-12">Day</h3>
+                    <h3 class="column is-12 temp3">High</h3>
+                    <h3 class="column is-12 temp4">Low</h3>
+                    <h3 class="column is-12 temp5">Cloudy or not</h3>
+                  </div>
+                </div>
+                <div class="column is-3">
+                  <div class="columns is-multiline">
+                    <h3 class="column is-12">Day</h3>
+                    <h3 class="column is-12 temp3">High</h3>
+                    <h3 class="column is-12 temp4">Low</h3>
+                    <h3 class="column is-12 temp5">Cloudy or not</h3>
+                  </div>
+                </div>
+                <div class="column is-3">
+                  <div class="columns is-multiline">
+                    <h3 class="column is-12">Day</h3>
+                    <h3 class="column is-12 temp3">High</h3>
+                    <h3 class="column is-12 temp4">Low</h3>
+                    <h3 class="column is-12 temp5">Cloudy or not</h3>
+                  </div>
+                </div>
+                <div class="column is-3">
+                  <div class="columns is-multiline">
+                    <h3 class="column is-12">Day</h3>
+                    <h3 class="column is-12 temp3">High</h3>
+                    <h3 class="column is-12 temp4">Low</h3>
+                    <h3 class="column is-12 temp5">Cloudy or not</h3>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
 
-  <h2 class="title">
-    Budget friendly local restaurants strongly recommended by Yelp are listed below for your consideration. 
-  </h2>
-
-
-
-    <div class="restRow">
-      <div class="restColumn">
-        <div class="restCard">
-          <img src="/assets/images/food1.jpg" alt ="foodie" />
-          <h2 class="Food1">---</h2>
-          <h2 class="Food2">---</h2>
-          <h2 class="Food3">---</h2>
-          <h2 class="Food4">---</h2>
-          <h2 class="Food5">---</h2>
-          <h2 class="Food6">---</h2>
-          <h2 class="Food8">---</h2>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="restRow">
-    <div class="restColumn">
-      <div class="restCard">
-        <img src="/assets/images/food5.jpg" alt ="foodie" />
-        <h2 class="Food1">---</h2>
-        <h2 class="Food2">---</h2>
-        <h2 class="Food3">---</h2>
-        <h2 class="Food4">---</h2>
-        <h2 class="Food5">---</h2>
-        <h2 class="Food6">---</h2>
-        <h2 class="Food8">---</h2>
-    </div>
-  </div>
-</div>    
-<div class="restRow">
-  <div class="restColumn">
-    <div class="restCard">
-      <img src="/assets/images/food6.jpg" alt ="foodie" />
-      <h2 class="Food1">---</h2>
-      <h2 class="Food2">---</h2>
-      <h2 class="Food3">---</h2>
-      <h2 class="Food4">---</h2>
-      <h2 class="Food5">---</h2>
-      <h2 class="Food6">---</h2>
-      <h2 class="Food8">---</h2>
-  </div>
-</div>
-</div>    
-<div class="restRow">
-  <div class="restColumn">
-    <div class="restCard">
-      <img src="/assets/images/food17.jpg" alt ="foodie" />
-      <h2 class="Food1">---</h2>
-      <h2 class="Food2">---</h2>
-      <h2 class="Food3">---</h2>
-      <h2 class="Food4">---</h2>
-      <h2 class="Food5">---</h2>
-      <h2 class="Food6">---</h2>
-      <h2 class="Food8">---</h2>
-  </div>
-</div>
-</div>
-<div class="restRow">
-  <div class="restColumn">
-    <div class="restCard">
-      <img src="/assets/images/food13.jpg" alt ="foodie" />
-      <h2 class="Food1">---</h2>
-      <h2 class="Food2">---</h2>
-      <h2 class="Food3">---</h2>
-      <h2 class="Food4">---</h2>
-      <h2 class="Food5">---</h2>
-      <h2 class="Food6">---</h2>
-      <h2 class="Food8">---</h2>
-  </div>
-</div>
-</div>
-<div class="restRow">
-<div class="restColumn">
-  <div class="restCard">
-    <img src="/assets/images/food14.jpg" alt ="foodie" />
-    <h2 class="Food1">---</h2>
-    <h2 class="Food2">---</h2>
-    <h2 class="Food3">---</h2>
-    <h2 class="Food4">---</h2>
-    <h2 class="Food5">---</h2>
-    <h2 class="Food6">---</h2>
-    <h2 class="Food8">---</h2>
-</div>
-</div>
-</div>    
-<div class="restRow">
-<div class="restColumn">
-<div class="restCard">
-  <img src="/assets/images/food9.jpg" alt ="foodie" />
-  <h2 class="Food1">---</h2>
-  <h2 class="Food2">---</h2>
-  <h2 class="Food3">---</h2>
-  <h2 class="Food4">---</h2>
-  <h2 class="Food5">---</h2>
-  <h2 class="Food6">---</h2>
-  <h2 class="Food8">---</h2>
-</div>
-</div>
-</div>    
-<div class="restRow">
-<div class="restColumn">
-<div class="restCard">
-  <img src="/assets/images/food9.jpg" alt ="foodie" />
-  <h2 class="Food1">---</h2>
-  <h2 class="Food2">---</h2>
-  <h2 class="Food3">---</h2>
-  <h2 class="Food4">---</h2>
-  <h2 class="Food5">---</h2>
-  <h2 class="Food6">---</h2>
-  <h2 class="Food8">---</h2>
-</div>
-</div>
-</div>
-    <!-- <div class="restRow">
-      <div class="restColumn">
-        <div class="restCard">
-          <img src="/assets/images/food9.jpg" alt ="foodie" />
-          <h2 class="Food1">---</h2>
-          <h2 class="Food2">---</h2>
-          <h2 class="Food3">---</h2>
-          <h2 class="Food4">---</h2>
-          <h2 class="Food5">---</h2>
-          <h2 class="Food6">---</h2>
-          <h2 class="Food8">---</h2>
-      </div>
-    </div>
-  </div>
-  <div class="restRow">
-    <div class="restColumn">
-      <div class="restCard">
-        <img src="/assets/images/food10.jpg" alt ="foodie" />
-        <h2 class="Food1">---</h2>
-        <h2 class="Food2">---</h2>
-        <h2 class="Food3">---</h2>
-        <h2 class="Food4">---</h2>
-        <h2 class="Food5">---</h2>
-        <h2 class="Food6">---</h2>
-        <h2 class="Food8">---</h2>
-    </div>
-  </div>
-</div>    
-<div class="restRow">
-  <div class="restColumn">
-    <div class="restCard">
-      <img src="/assets/images/food11.jpg" alt ="foodie" />
-      <h2 class="Food1">---</h2>
-      <h2 class="Food2">---</h2>
-      <h2 class="Food3">---</h2>
-      <h2 class="Food4">---</h2>
-      <h2 class="Food5">---</h2>
-      <h2 class="Food6">---</h2>
-      <h2 class="Food8">---</h2>
-  </div>
-</div>
-</div>    
-<div class="restRow">
-  <div class="restColumn">
-    <div class="restCard">
-      <img src="/assets/images/food12.jpg" alt ="foodie" />
-      <h2 class="Food1">---</h2>
-      <h2 class="Food2">---</h2>
-      <h2 class="Food3">---</h2>
-      <h2 class="Food4">---</h2>
-      <h2 class="Food5">---</h2>
-      <h2 class="Food6">---</h2>
-      <h2 class="Food8">---</h2>
-  </div>
-</div>
-</div>
-<div class="restRow">
-  <div class="restColumn">
-    <div class="restCard">
-      <img src="/assets/images/food13.jpg" alt ="foodie" />
-      <h2 class="Food1">---</h2>
-      <h2 class="Food2">---</h2>
-      <h2 class="Food3">---</h2>
-      <h2 class="Food4">---</h2>
-      <h2 class="Food5">---</h2>
-      <h2 class="Food6">---</h2>
-      <h2 class="Food8">---</h2>
-  </div>
-</div>
-</div>
-<div class="restRow">
-<div class="restColumn">
-  <div class="restCard">
-    <img src="/assets/images/food14.jpg" alt ="foodie" />
-    <h2 class="Food1">---</h2>
-    <h2 class="Food2">---</h2>
-    <h2 class="Food3">---</h2>
-    <h2 class="Food4">---</h2>
-    <h2 class="Food5">---</h2>
-    <h2 class="Food6">---</h2>
-    <h2 class="Food8">---</h2>
-</div>
-</div>
-</div>    
-<div class="restRow">
-<div class="restColumn">
-<div class="restCard">
-  <img src="/assets/images/food15.jpg" alt ="foodie" />
-  <h2 class="Food1">---</h2>
-  <h2 class="Food2">---</h2>
-  <h2 class="Food3">---</h2>
-  <h2 class="Food4">---</h2>
-  <h2 class="Food5">---</h2>
-  <h2 class="Food6">---</h2>
-  <h2 class="Food8">---</h2>
-</div>
-</div>
-</div>    
-<div class="restRow">
-<div class="restColumn">
-<div class="restCard">
-  <img src="/assets/images/food16.jpg" alt ="foodie" />
-  <h2 class="Food1">---</h2>
-  <h2 class="Food2">---</h2>
-  <h2 class="Food3">---</h2>
-  <h2 class="Food4">---</h2>
-  <h2 class="Food5">---</h2>
-  <h2 class="Food6">---</h2>
-  <h2 class="Food8">---</h2>
-</div>
-</div>
-</div> -->
-        <!-- <h1 class ="temp">---</h1> -->
-    <!-- <div class="sky">
-        <div class="sun"></div>
-        <div class="cloud">
-            <div class="circle-small"></div>
-            <div class="circle-tall"></div>
-            <div class="circle-medium"></div> -->
-    <!-- <footer>
+    <p>Budget friendly local restaurants strongly recommended by Yelp are listed below for your consideration.</p>
+    <div class="columns is-multiline" id="resData">
 
-      <p>Collaborators: Muhammad; Meni; Gabriel; Sudarshan; Nittaya</p>
-
-    </footer> -->
-
+  
+    </div>
     <footer class="footer">
       <div class="content has-text-centered">
         <p>
-          <strong>WhatRightNow</strong> by <a href="#">group6-pop</a>. The source code is licensed
+[Click here to check our deployed project](https://meetsudarshan.github.io/WhatRightNow/)
+<strong>WhatRightNow</strong> by <a href="">group6-pop</a>. The source code is licensed
           <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
         </p>
         <p>
@@ -301,10 +123,12 @@
         </p>
       </div>
     </footer>
+  </div>
+
     <script src="./assets/js/script.js"></script>
 
 
 
-  </body>
-  
+</body>
+
 </html>
