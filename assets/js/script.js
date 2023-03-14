@@ -317,12 +317,12 @@ function YelpApiCallData(callData) {
 
   //resturant name in card content
   var resturantName = document.createElement("p");
-  resturantName.classList.add("title")
+  resturantName.classList.add("title", "nameSize");
   resturantName.textContent = callData.name;
   // restaurantsData.append(resturantName);
 
   var resturantCategory = document.createElement("p");
-  resturantCategory.classList.add("subtitle");
+  resturantCategory.classList.add("subtitle", "subHeading");
   resturantCategory.textContent = callData.categories[0].title;
   //console.log(resturantCategory);
 
@@ -337,6 +337,7 @@ function YelpApiCallData(callData) {
 
 
   var resturantAddress = document.createElement("p");
+resturantAddress.classList.add("addressSize");
   var address = callData.location.display_address;
   var address11 = callData.location.display_address[0];
   console.log(address11);
