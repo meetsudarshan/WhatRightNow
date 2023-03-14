@@ -166,7 +166,7 @@ function weatherApi() {
         })
         .then(function (citydata) {
           console.log(citydata);
-
+          
           //main div for current Weather
           var cWeather = document.createElement("div");
           cWeather.classList.add("column", "is-full");
@@ -225,9 +225,9 @@ function weatherApi() {
 
 
           //h1 for temp
-          var tempH1 = document.createElement("h1");
+          var tempH1 = document.createElement("h2");
           tempH1.classList.add("column", "is-12");
-          tempH1.textContent = citydata.current.temp + "°F";
+          tempH1.textContent =  "Current Temp: " + citydata.current.temp + "°F";
 
 
           //h2 for feel like
@@ -264,12 +264,16 @@ function weatherApi() {
           fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputvalue.value}&appid=108dd9a67c96f23039937fe6f3c91963`)
             .then(function (response) {
               return response.json();
-            })
+            }) 
+          
             .then(function (dd) {
               console.log(dd);
             })
+            
         })
+        
     })
+    .catch(err => alert('Wrong City name')); 
 }
 
 function YelpApiCallData(callData) {
