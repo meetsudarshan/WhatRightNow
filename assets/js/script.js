@@ -277,11 +277,12 @@ function weatherApi() {
         
     })
     .catch(err => modal.classList.add('is-active')); 
-    modalBg.addEventListener('click', ()=> {
-      modal.classList.remove('is-active');
-    });
+    
   }
 
+modalBg.addEventListener('click', ()=> {
+      modal.classList.remove('is-active');
+    });
 
 function YelpApiCallData(callData) {
   var resturantCard = document.createElement("div");
