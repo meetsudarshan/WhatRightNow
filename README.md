@@ -3,7 +3,7 @@
 
 ## Description
 
-WhatRightNow website will provide you weather information and best resturant locations in 25 Miles radius.We implemented copncepts learned in First 6 weeks of bootcamp in our project by creating UI using CSS framework, use local storage to retrive recent searched results, third party API calls to get weather and restaurant data.
+WhatRightNow website will provide you weather information and best restaurant locations in 25 Miles radius.We implemented copncepts learned in First 6 weeks of bootcamp in our project by creating UI using CSS framework, use local storage to retrive recent searched results, third party API calls to get weather and restaurant data.
 
 [Click here to check our deployed project](https://meetsudarshan.github.io/WhatRightNow/)
 
@@ -14,8 +14,8 @@ As a customer, I would like to see a webpage where I can search the current weat
 1. It is done when I can see the option to search a location. 
 2. It is done when I am able to see the current weather when I search with the location. 
 3. It is done when I can see the temperature, wind speed, current humidity, current weather condition and what the temperature actually feels like. 
-4. It is done when I can see a minimum of 10 recommendations of restaurants near me. 
-5. It is done when the recommendations of the restaurants include image of the restaurants, name, address, Restaurant type, phone number and address. 
+4. It is done when I can see up to 20 recommendations of restaurants near me. 
+5. It is done when the recommendations of the restaurants include image of the restaurants, name, address, Restaurant Category, phone number and address. 
 6. It is done when upon entering an incorrect location I am alerted to input a current name. 
 
 ## Table of Contents 
@@ -36,7 +36,6 @@ Following technologies used in this project
 * CSS 
 * Bulma CSS Framework
 * JavaScript
-* Jquery
 * Json
 
 ## APIs
