@@ -37,7 +37,8 @@ searchButton.addEventListener("click", function () {
   localStorage.setItem("location", inputValue);
 });
 
-// var image = document.getElementById('image').src;
+
+//api call testing funtion
 
 
 // button.addEventListener('click', function weatherAPI(){
@@ -113,9 +114,9 @@ searchButton.addEventListener("click", function () {
 // }
 // }
 
-function WeartherApiCallData(cData) {
+// function WeartherApiCallData(cData) {
 
-}
+// }
 
 function weatherApi() {
   fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${inputvalue.value},US&units=imperial&appid=108dd9a67c96f23039937fe6f3c91963`)
@@ -125,14 +126,14 @@ function weatherApi() {
     .then(function (data) {
       locCard.textContent = "";
 
-      console.log(data);
+//       console.log(data);
       var lati = data.city.coord.lat;
-      console.log(lati);
+//       console.log(lati);
       var long = data.city.coord.lon;
-      console.log(long);
+//       console.log(long);
       var date = new Date().toLocaleDateString();
 
-
+//testing code
       // temp7.textContent = data.city.name;
       // temp8.textContent = date;
       // var weatherIcon =
@@ -148,7 +149,7 @@ function weatherApi() {
 
       //h2 for location
       var locationH2 = document.createElement("h2");
-      locationH2.classList.add("column", "is-6");
+      locationH2.classList.add("column", "is-6", "temp7");
       locationH2.textContent = data.city.name;
 
       //h2 for date
@@ -168,7 +169,7 @@ function weatherApi() {
           return response.json();
         })
         .then(function (citydata) {
-          console.log(citydata);
+//           console.log(citydata);
           
           //main div for current Weather
           var cWeather = document.createElement("div");
@@ -181,7 +182,7 @@ function weatherApi() {
 
           // clouds or not data
           var isClouds = document.createElement("h2")
-          isClouds.classList.add("column", "is-4");
+          isClouds.classList.add("column", "is-4", "temp6");
           isClouds.textContent = citydata.current.weather[0].description;
 
           // wind or not data
@@ -211,12 +212,14 @@ function weatherApi() {
 
           var isImageDiv = document.createElement("div")
           isImageDiv.classList.add("column", "is-6");
+        
           //image tage for weather image
           var isImage = document.createElement("img");
           var iconCode = citydata.current.weather[0].icon;
           isImage.textContent = iconCode;
           isImage.setAttribute("src", "https://openweathermap.org/img/wn/" + iconCode + "@2x.png")
-          isImage.setAttribute("alt", "weater image");
+          isImage.setAttribute("alt", "weather image");
+        
           // temp card div
 
           var isTemp = document.createElement("div");
@@ -247,33 +250,93 @@ function weatherApi() {
           ImageWeather.append(IWeather);
           locCard.append(ImageWeather);
 
-          console.log(citydata.daily);
+//           console.log(citydata.daily);
 
           //main div for forecast Weather
           var fWeather = document.createElement("div");
           fWeather.classList.add("column", "is-full");
           fWeather.textContent = "";
 
-          var dData = "";
-          //temp8.innerText=`${citydata.current.dt}`
 
-          // temp.innerText = `Temp:${citydata.current.temp}°F`
-          // for (var i = 0 ; i <citydata.daily.length; i++) {
-          //   var location = 
-          // }
-        })
-        .then(function (d) {
-          console.log(d)
-          fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputvalue.value}&appid=108dd9a67c96f23039937fe6f3c91963`)
-            .then(function (response) {
-              return response.json();
-            }) 
+          //days
+          var mainDays = document.createElement("div");
+          mainDays.classList.add("columns");
+          mainDays.textContent = "";
+
+
+          var dData = citydata.daily;
+        
+        
+        // mainDays.append()
+
+          fWeather.append(mainDays);
+          locCard.append(fWeather);
           
-            .then(function (dd) {
-              console.log(dd);
-            })
-            
+        for (var x = 0; x < 4; x++) {
+
+
+            //day1
+            var firstDay = document.createElement("div");
+            firstDay.classList.add("column", "is-3");
+
+
+            //day1 column
+            var firstDaycol = document.createElement("div");
+            firstDaycol.classList.add("columns", "is-multiline");
+
+            //day1 date
+            var firstDaycolDate = document.createElement("div");
+            firstDaycolDate.classList.add("column", "is-12");
+            var date1 = dData[x].dt;
+            // console.log(date1);
+            var date01 = new Date(date1 * 1000);
+//             console.log(date01);
+            // var date2 = JSON.stringify(date01);
+            var date2 = date01.toLocaleDateString();
+//             console.log(date2)
+            // var date3 = date2.slice(1, 4);
+            // console.log(date3);
+            firstDaycolDate.textContent = date2;
+
+            //day High
+            var firstDaycolHigH = document.createElement("div");
+            firstDaycolHigH.classList.add("column", "is-12", "temp3");
+            firstDaycolHigH.textContent = "High: " + dData[x].temp.max + "°F";
+            // console.log(firstDaycolHigH);
+
+            //day low
+
+            var firstDaycolLow = document.createElement("div");
+            firstDaycolLow.classList.add("column", "is-12", "temp3");
+            firstDaycolLow.textContent = "Low: " + dData[x].temp.min + "°F";
+            //day cloud
+
+            var firstDaycolCloud = document.createElement("div");
+            firstDaycolCloud.classList.add("column", "is-12");
+            var isFImage = document.createElement("img");
+            var iconFCode = dData[x].weather[0].icon;
+            isFImage.textContent = iconFCode;
+            isFImage.setAttribute("src", "https://openweathermap.org/img/wn/" + iconCode + "@2x.png")
+            isImage.setAttribute("alt", "weather image");
+            // firstDaycolCloud.textContent = dData[x].weather[0].description;
+            firstDaycolCloud.append(isFImage);
+            firstDaycol.append(firstDaycolDate, firstDaycolHigH, firstDaycolLow, firstDaycolCloud);
+            firstDay.append(firstDaycol);
+            mainDays.append(firstDay);
+          }
         })
+//         .then(function (d) {
+//           console.log(d)
+//           fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputvalue.value}&appid=108dd9a67c96f23039937fe6f3c91963`)
+//             .then(function (response) {
+//               return response.json();
+//             }) 
+          
+//             .then(function (dd) {
+//               console.log(dd);
+//             })
+            
+//         })
         
     })
     .catch(err => modal.classList.add('is-active')); 
@@ -340,12 +403,12 @@ function YelpApiCallData(callData) {
 resturantAddress.classList.add("addressSize");
   var address = callData.location.display_address;
   var address11 = callData.location.display_address[0];
-  console.log(address11);
+//   console.log(address11);
   var address12 = callData.location.display_address[1];
-  console.log(address12);
+//   console.log(address12);
   var address13 = callData.location.display_address[2];
-  console.log(address13);
-  console.log(address11 + address12 + address13)
+//   console.log(address13);
+//   console.log(address11 + address12 + address13)
   if (address.length < 3) {
     resturantAddress.textContent = address11 + " " + address12;
   }
@@ -387,7 +450,7 @@ function yelpApi() {
 
     })
     .then(function (data) {
-      console.log(data);
+//       console.log(data);
       var businesses = data.businesses;
       restaurantsData.textContent = "";
       for (var j = 0; j < businesses.length; j++) {
